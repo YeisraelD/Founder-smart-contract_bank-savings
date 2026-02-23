@@ -19,12 +19,16 @@ contract SavingsBank {
 
     // Withdraw ETH
     function withdraw(uint256 amount) external {
-        require(amount <= balances[msg.sender], "Insufficient balance");
-        balances[msg.sender] -= amount;
-        totalBalance -= amount;
-        payable(msg.sender).transfer(amount);
-        emit Withdrawal(msg.sender, amount);
-    }
+    require(amount <= balances[msg.sender], "Insufficient balance");
+
+    balances[msg.sender] -= amount;
+    totalBalance -= amount;
+
+    (bool success, ) = msg.sender.call{value: amount}("");
+    require(success, "Withdraw failed");
+
+    emit Withdrawal(msg.sender, amount);
+}
 
     // Check user balance
     function getBalance(address user) external view returns (uint256) {
