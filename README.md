@@ -17,12 +17,16 @@ https://book.getfoundry.sh/
 ```shell
 $ forge build
 ```
+<img width="1380" height="430" alt="image" src="https://github.com/user-attachments/assets/521458cd-cf9f-45a7-906b-dd2dabf357d0" />
+
 
 ### Test
 
 ```shell
 $ forge test
 ```
+<img width="1417" height="318" alt="image" src="https://github.com/user-attachments/assets/c022ebc4-a339-49f1-9169-fe7ccac0d732" />
+
 
 ### Format
 
@@ -41,6 +45,8 @@ $ forge snapshot
 ```shell
 $ anvil
 ```
+<img width="1415" height="552" alt="image" src="https://github.com/user-attachments/assets/8671e2ff-69cd-48a5-bbd8-6594a62b9176" />
+
 
 ### Deploy
 
