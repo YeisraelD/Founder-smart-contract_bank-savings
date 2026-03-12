@@ -111,16 +111,6 @@ contract Counter {
         uint256 reward = calculateReward(msg.sender);
         userStake.claimed = true;
         payable(msg.sender).call{value: userStake.amount + reward}("");
-//         //Error: Compiler run failed:
-// Error (2314): Expected ')' but got '('
-//    --> src/Counter.sol:113:68:
-//     |
-// 113 |         payable(msg.sender).call({value: userStake.amount + reward}(""));
-// so we need to change the syntax to : 
-// payable(msg.sender).call{value: userStake.amount + reward}("");
-// 
-//     |                                                                    ^
-
 
     }
 
