@@ -12,7 +12,8 @@ contract CounterScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        counter = new Counter();
+        counter = new Counter(1);
+
 
         vm.stopBroadcast();
     }
